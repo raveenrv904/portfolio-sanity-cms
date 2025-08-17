@@ -30,27 +30,6 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'proficiency',
-      title: 'Proficiency Level',
-      type: 'string',
-      options: {
-        list: [
-          {title: 'Beginner', value: 'beginner'},
-          {title: 'Intermediate', value: 'intermediate'},
-          {title: 'Advanced', value: 'advanced'},
-          {title: 'Expert', value: 'expert'},
-        ],
-        layout: 'radio',
-      },
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'yearsOfExperience',
-      title: 'Years of Experience',
-      type: 'number',
-      validation: (Rule) => Rule.required().min(0),
-    }),
-    defineField({
       name: 'description',
       title: 'Description',
       type: 'text',
@@ -109,11 +88,6 @@ export default defineType({
       ],
     },
     {
-      title: 'Proficiency Level',
-      name: 'proficiencyDesc',
-      by: [{field: 'proficiency', direction: 'desc'}],
-    },
-    {
       title: 'Featured First',
       name: 'featuredFirst',
       by: [
@@ -126,14 +100,13 @@ export default defineType({
     select: {
       title: 'name',
       category: 'category',
-      proficiency: 'proficiency',
       media: 'icon',
       featured: 'featured',
     },
-    prepare({title, category, proficiency, media, featured}) {
+    prepare({title, category, media, featured}) {
       return {
         title,
-        subtitle: `${category} • ${proficiency}${featured ? ' • Featured' : ''}`,
+        subtitle: `${category}${featured ? ' • Featured' : ''}`,
         media,
       }
     },
