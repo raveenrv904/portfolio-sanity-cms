@@ -73,12 +73,6 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'rating',
-      title: 'Rating (1-5)',
-      type: 'number',
-      validation: (Rule) => Rule.min(1).max(5),
-    }),
-    defineField({
       name: 'notes',
       title: 'Personal Notes',
       type: 'array',

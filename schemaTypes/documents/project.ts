@@ -28,7 +28,7 @@ export default defineType({
       title: 'Short Description',
       type: 'text',
       rows: 3,
-      validation: (Rule) => Rule.required().max(200),
+      validation: (Rule) => Rule.required().max(500),
     }),
     defineField({
       name: 'longDescription',

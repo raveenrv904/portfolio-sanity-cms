@@ -21,6 +21,15 @@ export default defineType({
       validation: (Rule) => Rule.required().max(200),
     }),
     defineField({
+      name: 'profileImage',
+      title: 'Profile Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'author',
       title: 'Author Name',
       type: 'string',
