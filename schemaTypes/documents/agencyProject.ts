@@ -71,11 +71,6 @@ export default defineType({
       validation: (Rule) => Rule.required().min(1),
     }),
     defineField({
-      name: 'githubUrl',
-      title: 'GitHub Repository URL',
-      type: 'url',
-    }),
-    defineField({
       name: 'liveUrl',
       title: 'Live Demo URL',
       type: 'url',

@@ -24,6 +24,8 @@ export default defineType({
           {title: 'Database', value: 'database'},
           {title: 'DevOps', value: 'devops'},
           {title: 'Design', value: 'design'},
+          {title: 'Programming Language', value: 'programming-language'},
+          {title: 'Framework', value: 'framework'},
           {title: 'Other', value: 'other'},
         ],
       },
